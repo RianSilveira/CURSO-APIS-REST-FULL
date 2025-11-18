@@ -1,3 +1,4 @@
+"use strict";
 /* import express from 'express';
 
 const app = express();
@@ -14,22 +15,17 @@ app.get('/products/:id/:user', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 }); */
-
-import express from 'express';
-
-const app = express();
-
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const app = (0, express_1.default)();
 const PORT = 3000;
-
 app.get('/products', (req, res) => {
     const { page, limit } = req.query;
-
     res.send(`pagina: ${page} de ${limit}`);
-    
-    
-  
 });
-
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+    console.log(`Servidor rodando na porta ${PORT}`);
 });

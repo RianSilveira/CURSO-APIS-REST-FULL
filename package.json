@@ -4,13 +4,18 @@
   "description": "Criando Api REST com Node.js",
   "main": "src/server.js",
   "scripts": {
-    "test": "{}"
+    "dev": "tsc --watch"
   },
   "keywords": [],
   "author": "Rian Silveira",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.14.12",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
